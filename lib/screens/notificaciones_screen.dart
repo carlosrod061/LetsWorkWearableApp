@@ -118,18 +118,24 @@ class _NotificacionesState extends State<Notificaciones> {
                               Text(
                                   _notificacionesList[index]
                                       .categoriaNotificacion,
+                                  maxLines: 2,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15))
                             ],
                           ),
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                  _notificacionesList[index]
-                                      .contenidoNotificacion,
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 10))
+                                _notificacionesList[index]
+                                    .contenidoNotificacion,
+                                overflow: TextOverflow.clip,
+                                maxLines: 1,
+                                softWrap: false,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10),
+                              )
                             ],
                           ),
                           // Usamos una fila para ordenar los botones del card
